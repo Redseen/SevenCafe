@@ -3,7 +3,7 @@ $(document).ready(function () {
     setInterval(function () {
 
         $.ajax({
-            url: "http://192.168.0.212/doStuff.py",
+            url: "doStuff.py",
             success: function (data) {
                 if (data === "0") {
                     $(".btn").removeClass("btn-scale");
@@ -14,7 +14,7 @@ $(document).ready(function () {
             }
         });
 
-    }, 1000)
+    },500)
 
     //$("#chkScale").click(function () {
     //    if ($("#chkScale").prop("checked")) {

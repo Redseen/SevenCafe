@@ -6,11 +6,17 @@ $(document).ready(function () {
             url: "doStuff.py",
             success: function (data) {
                 if (data === "0") {
+                    $("#container-btn").addClass("disp-none");
+                    $("#container-shadow").removeClass("disp-none");
                     $(".btn").removeClass("btn-scale");
-                } else {
+                } else if (data === "1") {
+                    $("#container-btn").removeClass("disp-none");
+                    $("#container-shadow").addClass("disp-none");
+                } else if (data === "2") {
+                    $("#container-btn").removeClass("disp-none");
+                    $("#container-shadow").addClass("disp-none");
                     $(".btn").addClass("btn-scale");
                 }
-                $("#aaaa").html(data);
             }
         });
 
@@ -26,4 +32,24 @@ $(document).ready(function () {
 
 });
 
-
+// $("#chkM").click(function(){
+//   if ($("#chkM").prop("checked")) {
+// 	  $("#container-btn").removeClass("disp-none");
+// 	  $("#container-shadow").addClass("disp-none");
+//   } else {
+// 	  $("#container-btn").addClass("disp-none");
+// 	  $("#container-shadow").removeClass("disp-none");
+//   }
+// });
+// 
+// $("#chkL").click(function(){
+//   if ($("#chkL").prop("checked")) {
+// 	  $("#container-btn").removeClass("disp-none");
+// 	  $("#container-shadow").addClass("disp-none");
+// 	  $(".btn").addClass("btn-scale");
+//   } else {
+// 	  $("#container-btn").addClass("disp-none");
+// 	  $("#container-shadow").removeClass("disp-none");
+// 	  $(".btn").removeClass("btn-scale");
+//   }
+// });
